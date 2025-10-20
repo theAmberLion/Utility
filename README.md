@@ -1,2 +1,2 @@
-# scripts
-Just some scripts targeting some needs.
+# Utility
+Just some stuff like scripts or ISO images, targeting some needs.
