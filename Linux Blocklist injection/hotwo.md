@@ -5,8 +5,11 @@
 ## 2. Copy files 
 
 **create_ipsets.sh**, 
+
 **inject_blocklists.sh**, 
+
 and **update_blocklists.sh** 
+
 into created directory
 
 ## 3. Make files executable
