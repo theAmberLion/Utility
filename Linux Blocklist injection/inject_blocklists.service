@@ -1,0 +1,13 @@
+# nano /etc/systemd/system/inject_blocklists.service
+
+[Unit]
+Description=Inject Blocklist Rules into iptables RAW table
+After=network.target ipset.service
+
+[Service]
+Type=oneshot
+ExecStart=/BLOCKLIST/inject_blocklists.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
