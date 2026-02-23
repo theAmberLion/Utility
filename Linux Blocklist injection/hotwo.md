@@ -45,21 +45,26 @@ By running script via `./create_ipsets.sh` command
 `ipset list -terse`
 
 7. Update the blocklists and populate the ipsets for the first time:
+
 By running script via `./update_blocklists.sh` command 
 
 8. Verify blocklists update log: 
+
 `tail -n 50 /var/log/update-blacklists.log`
 
 9. Verify ipsets again:
+
 `ipset list -terse`
 You should see that ipsets contain elements now:
 `Number of entries:` row
 
 10. Start and enable the service:
+
 `systemctl enable inject_blocklists.service`
 `systemctl start inject_blocklists.service`
 
 11. Verify status:
+
 `systemctl status inject_blocklists.service`
 If some errors happened, then you will see output there.
 
