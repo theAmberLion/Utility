@@ -1,4 +1,5 @@
 # 2026-02-23 09:59:40 by RouterOS 7.20.2
+# Use these pattern on rules at Mangle level on inbound traffic from WAN
 
 /ip firewall layer7-protocol
 add name=HTTP_Path_Directory_Traversal_patterns regexp="\\x2f\?(\\.\\.|\\.%2e|\
@@ -39,3 +40,4 @@ add name=HTTP_Command_execution_patterns regexp="cd%20\\x2f|cd[ \\t\\r\\n\\v\\f]
 add name=HTTP_file_crawling_pattern regexp="get[ \\t\\r\\n\\v\\f]+.+\\x2f\?\\.env|get[ \\t\\r\\n\\v\\f]+.+\\x2f\?\\.git\\x2f(config|credentials)|get[ \\t\\r\\n\\v\\f]+.+\\x2fPHP\\x2feval-stdin.php|get[ \\t\\r\\n\\v\\f]+\\x2fadmin\\x2f(config\\.php|config)\r\n"
 add name=SIP_Bogus_User-Agents regexp="PolycomSoundPointIP|SIP.Scanner|Z 3\\.14\\.38765 rv2\\.8\\.."
 add name=SMTP_bogus_EHLO_messages regexp="ehlo[ \\t\\r\\n\\v\\f]+user|ehlo[ \\t\\r\\n\\v\\f]+admin|ehlo[ \\t\\r\\n\\v\\f]+win-c5h9jsrghtg|ehlo[ \\t\\r\\n\\v\\f]+localhost|ehlo[ \\t\\r\\n\\v\\f]+domain|ehlo[ \\t\\r\\n\\v\\f]+95\\.65\\.73\\.|ehlo[ \\t\\r\\n\\v\\f]+127.0.0."
+
