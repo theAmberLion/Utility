@@ -30,11 +30,13 @@ with this content
 ```
 [Unit]
 Description=Inject Blocklist Rules into iptables RAW table
+Before=shutdown.target
 After=network.target ipset.service
 
 [Service]
 Type=oneshot
 ExecStart=/BLOCKLIST/inject_blocklists.sh
+ExecStop=/BLOCKLIST/remove_blocklists.sh
 RemainAfterExit=yes
 
 [Install]
@@ -71,7 +73,10 @@ You should see that ipsets contain elements now:
 ## 10. Start and enable the service:
 
 `systemctl enable inject_blocklists.service`
-`systemctl start inject_blocklists.service`
+
+`systemctl start inject_blocklists.service` - will inject rules into the PREROUTING chain of the iptables RAW table.
+
+`systemctl start inject_blocklists.service` - will remove previously injected rules from the PREROUTING chain of the iptables RAW table.
 
 ## 11. Verify status:
 
