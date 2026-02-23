@@ -31,3 +31,10 @@ ipset create blk_botscout_7d hash:net family inet hashsize 8192 maxelem 30000
 # https://iplists.firehol.org/?ipset=php_dictionary_30d
 
 ipset create blk_phpdictionary hash:net family inet hashsize 8192 maxelem 30000
+
+# Don't forget to
+#
+# mkdir /etc/ipset/
+# ipset save > /etc/ipset/ipset
+# 
+# after
