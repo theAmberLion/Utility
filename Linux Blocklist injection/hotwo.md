@@ -9,7 +9,9 @@
 ## 3. Make files executable
 
 `chmod +x create_ipsets.sh`
+
 `chmod +x inject_blocklists.sh`
+
 `chmod +x update_blocklists.sh`
 
 ## 4. Create system service for injecting ipset-based rules into iptables RAW table
