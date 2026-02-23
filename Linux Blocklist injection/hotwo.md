@@ -71,9 +71,11 @@ You should see that ipsets contain elements now:
 If some errors happened, then you will see output there.
 
 ## 12. Create scheduled task to update blocklists every morning
-crontab -e 
-0 6 * * * /BLOCKLIST/update_blklists.sh
+crontab -e
+`0 6 * * * /BLOCKLIST/update_blklists.sh`
 
 or nano /etc/crontab
-0 6 * * * root /BLOCKLIST/update_blklists.sh
+`0 6 * * * root /BLOCKLIST/update_blklists.sh`
+
+# That's it!
 
