@@ -70,6 +70,8 @@ You should see that ipsets contain elements now:
 `systemctl status inject_blocklists.service`
 If some errors happened, then you will see output there.
 
+To check iptables rules, run `iptables -t raw -L -v -n --line-numbers`
+
 ## 12. Create scheduled task to update blocklists every morning
 crontab -e
 `0 6 * * * /BLOCKLIST/update_blklists.sh`
@@ -78,4 +80,3 @@ or nano /etc/crontab
 `0 6 * * * root /BLOCKLIST/update_blklists.sh`
 
 # That's it!
-
