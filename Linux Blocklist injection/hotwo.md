@@ -76,7 +76,7 @@ You should see that ipsets contain elements now:
 
 `systemctl start inject_blocklists.service` - will inject rules into the PREROUTING chain of the iptables RAW table.
 
-`systemctl start inject_blocklists.service` - will remove previously injected rules from the PREROUTING chain of the iptables RAW table.
+`systemctl stop inject_blocklists.service` - will remove previously injected rules from the PREROUTING chain of the iptables RAW table.
 
 ## 11. Verify status:
 
