@@ -1,10 +1,10 @@
-1. Create a directory
+#### 1. Create a directory
 
 `mkdir /BLOCKLISTS`
 
-2. Copy files **create_ipsets.sh**, **inject_blocklists.sh**, and **update_blocklists.sh** into created directory
+#### 2. Copy files **create_ipsets.sh**, **inject_blocklists.sh**, and **update_blocklists.sh** into created directory
 
-3. Make files executable
+#### 3. Make files executable
 
 `chmod +x create_ipsets.sh`
 `chmod +x inject_blocklists.sh`
