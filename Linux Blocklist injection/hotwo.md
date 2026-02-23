@@ -8,6 +8,8 @@
 
 **inject_blocklists.sh**, 
 
+**remove_blocklists.sh**, 
+
 and **update_blocklists.sh** 
 
 into created directory
@@ -17,6 +19,8 @@ into created directory
 `chmod +x create_ipsets.sh`
 
 `chmod +x inject_blocklists.sh`
+
+`chmod +x remove_blocklists.sh`
 
 `chmod +x update_blocklists.sh`
 
@@ -43,7 +47,7 @@ RemainAfterExit=yes
 WantedBy=multi-user.target
 ```
 
-Adjust <kbd>ExecStart=</kbd> with your own path, of you created directory.
+Adjust <kbd>ExecStart=</kbd> and <kbd>ExecStop=</kbd> with your own path, of you created directory.
 
 After editing the service file, do not forget to reload:
 
