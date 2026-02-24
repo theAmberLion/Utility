@@ -14,6 +14,19 @@ and **update_blocklists.sh**
 
 into created directory
 
+Be aware that  **update_blocklists.sh** uses full paths to executables. Adjust them accordingly your system.
+
+`/usr/local/bin/curl`
+
+To find what are the patch to executables, use 
+
+`which jq`
+`which ipset`
+`which curl`
+`which grep`
+
+and so on...
+
 ## 3. Make files executable
 
 `chmod +x create_ipsets.sh`
@@ -63,6 +76,7 @@ By running script via `./create_ipsets.sh` command
 ## 7. Update the blocklists and populate the ipsets for the first time:
 
 By running script via `./update_blocklists.sh` command 
+
 
 ## 8. Verify blocklists update log: 
 
