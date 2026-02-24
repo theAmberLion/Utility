@@ -21,9 +21,13 @@ Be aware that  **update_blocklists.sh** uses full paths to executables. Adjust t
 To find what are the patch to executables, use 
 
 `which jq`
+
 `which ipset`
+
 `which curl`
+
 `which grep`
+
 
 and so on...
 
