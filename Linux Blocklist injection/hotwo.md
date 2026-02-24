@@ -18,7 +18,7 @@ Be aware that  **update_blocklists.sh** uses full paths to executables. Adjust t
 
 `/usr/local/bin/curl`
 
-To find what are the patch to executables, use 
+To find what are the path to executables in your system, use:
 
 `which jq`
 
